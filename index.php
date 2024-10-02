@@ -7,5 +7,8 @@
 </head>
 <body>
     <h1>index</h1>
+    <footer>
+        <h2>here komt de footer</h2>
+    </footer>
 </body>
 </html>
