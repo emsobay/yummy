@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Berko, Walid">
     <title>Chillies Galore | Reservering</title>
     <link rel="stylesheet" href="test.css">
 </head>
