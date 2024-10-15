@@ -5,18 +5,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #484C57;
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
 }
 
 header {
-    grid-area: header;
     background-color: #235D3A;
     color: #fff;
     padding: 10px 0;
@@ -26,11 +17,10 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
@@ -39,19 +29,12 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
-    grid-area: main;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
 footer {
-    grid-area: footer;
     background-color: #B10001;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: sticky;
+    position:sticky;
     bottom: 0;
     width: 100%;
 }
@@ -66,71 +49,136 @@ footer {
     width: 100%;
 }
 
-/* Menu Layout */
+
+/*menu foto*/
+/* Zorg ervoor dat main de volledige breedte en hoogte benut */
+
 .menu {
     display: flex;
     justify-content: center;
     padding: 20px;
+    box-sizing: border-box;
 }
 
+/* De menu-container */  
 #menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    align-items: start;
+    width: 80%; /* Past aan hoe breed het menu is */
+    display: flex;
+    flex-direction: row; /* Zet de afbeelding en menu-secties op één rij */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Ruimte tussen de afbeelding en het menu */
 }
 
+/* Secties binnen het menu */
 .menu-section {
     width: 100%;
     margin-bottom: 40px;
 }
 
-h2, h3 {
-    text-align: center;
+/* Opmaak voor de titels */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; /* Center de hoofdsectietitel */
 }
 
-/* Price style in menu */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Stijling van de lijst en items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Prijs opmaak */
 .price {
     float: right;
     font-weight: bold;
 }
 
-/* Small image in the menu */
+/* Kleine afbeelding in het menu */
 #menu aside img {
-    width: 150px;
+    width: 150px; /* Pas de grootte van de afbeelding aan */
     height: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Optioneel: afbeelding rond maken */
+    align-self: flex-start; /* Zorg ervoor dat de afbeelding aan de bovenkant van de container blijft */
 }
 
+/* Responsieve layout voor kleinere schermen */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column; /* Stapel afbeelding en menu-secties onder elkaar */
+        align-items: center; /* Center alles */
+    }
+
+    #menu aside img {
+        margin-bottom: 20px; /* Ruimte onder de afbeelding */
+    }
+}
+
+
+
 /* Slideshow Styles */
+
+/* Zorg dat main alles verticaal uitlijnt en het hele scherm vult */
 .main_home {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    justify-items: center;
-    align-items: center;
-    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat alles verticaal wordt gestapeld */
+    justify-content: center; /* Verticaal centreren van de content */
+    align-items: center;     /* Horizontaal centreren van de content */
+    height: 100vh;           /* Vul de volledige hoogte van het venster */
     box-sizing: border-box;
 }
 
+/* Zorg ervoor dat de grid-container alles verticaal stapelt */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Eerste rij voor de titel, tweede rij voor de slideshow */
+    width: 100%;
+    max-width: 1200px; /* Maximale breedte van de container */
+    margin: 0 auto; /* Centrerend op de pagina */
+    gap: 20px; /* Ruimte tussen de titel en de slideshow */
+}
+
+/* Styling voor de titel */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin: 0; /* Geen extra marge rondom de titel */
+}
+
+/* Zorg dat de slideshow-container in het midden staat */
 #slideshow {
-    width: 80vw;
-    height: 50vh;
+    width: 80vw;  /* Pas aan naar een bredere waarde, zoals 80% van het venster */
+    height: 50vh; /* Grotere hoogte voor de slideshow */
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto; /* Gecentreerd blijven */
 }
 
+/* Zorg dat elke slide de volledige container vult */
 .slide {
     width: 100%;
     height: 100%;
     position: absolute;
     opacity: 0;
     animation: slideAnimation 15s infinite;
-    object-fit: cover;
+    object-fit: cover; /* Zorg ervoor dat de afbeelding wordt geschaald zonder vervorming */
 }
 
+/* Zorg dat elke slide op het juiste moment verschijnt */
 .slide:nth-child(1) {
     animation-delay: 0s;
 }
@@ -143,6 +191,7 @@ h2, h3 {
     animation-delay: 10s;
 }
 
+/* Keyframes voor vloeiende overgang */
 @keyframes slideAnimation {
     0% { opacity: 0; }
     10% { opacity: 1; }
@@ -151,7 +200,7 @@ h2, h3 {
     100% { opacity: 0; }
 }
 
-/* Text under slideshow */
+/* Styling voor de tekst onder de slideshow */
 .slideshow-text {
     text-align: center;
     font-size: 1.2rem;
@@ -159,36 +208,83 @@ h2, h3 {
     color: #555;
     width: 80%;
     line-height: 1.5;
-    margin: 0 auto;
+    margin: 0 auto; /* Zorgt ervoor dat de tekst gecentreerd blijft */
 }
 
-/* About Us page */
+
+
+
+/*styles van about us*/
+
+/* Flexbox layout voor main */
 .aboutus {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    display: flex;
+    justify-content: space-between; /* Zorg dat de tekst en afbeeldingen gescheiden zijn */
+    align-items: flex-start;
     padding: 20px;
+    box-sizing: border-box;
 }
 
+/* Styling voor de About-sectie */
 #about {
-    width: 100%;
-    line-height: 1.6;
-    font-size: 1.2rem;
+    width: 70%; /* Zorg dat de tekstsectie 70% van de ruimte inneemt */
+    line-height: 1.6; /* Verbeter de leesbaarheid met meer regelafstand */
+    font-size: 1.2rem; /* Maak de tekst iets groter voor betere leesbaarheid */
+}
+
+/* Verklein en positioneer de afbeeldingen in de aside */
+#menu {
+    width: 30%; /* De afbeelding-sectie neemt 30% van de ruimte in */
+    display: flex;
+    flex-direction: column; /* Zorg ervoor dat de afbeeldingen onder elkaar staan */
+    align-items: center; /* Centreer de afbeeldingen */
+    gap: 10px; /* Voeg wat ruimte tussen de afbeeldingen toe */
 }
 
 #menu img {
-    width: 80%;
+    width: 80%; /* Verklein de afbeeldingen naar 80% van de container */
     height: auto;
-    border-radius: 10px;
+    border-radius: 10px; /* Maak de hoeken licht afgerond voor een netter uiterlijk */
+}
+
+/* Responsive gedrag voor kleinere schermen */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Plaats de tekst en afbeeldingen onder elkaar op kleine schermen */
+        align-items: center;
+    }
+
+    #about {
+        width: 100%; /* Zorg dat de tekst de volledige breedte gebruikt */
+        margin-bottom: 20px; /* Voeg ruimte toe onder de tekst */
+    }
+
+    #menu {
+        width: 100%; /* Zorg dat de afbeelding-sectie de volledige breedte gebruikt */
+    }
+
+    #menu img {
+        width: 50%; /* Verklein de afbeeldingen nog verder voor kleine schermen */
+    }
+}
+
+
+
+/* Menu styles */ 
+#menu-section > li {
+    margin-bottom: 4vh; 
 }
 
 /* Gallery Styles */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    justify-items: center;
+#gallery {
     padding: 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .gallery-grid img {
@@ -198,18 +294,11 @@ h2, h3 {
     object-fit: cover;
 }
 
-/* Responsiveness */
-
-/* Mobile Styles */
+/* Mobile styles (max-width: 600px) */
 @media (max-width: 600px) {
     header {
         padding: 15px 0;
         font-size: 1.2em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
     }
 
     nav ul li {
@@ -218,20 +307,16 @@ h2, h3 {
     }
 
     #slideshow {
-        height: 250px;
+        height: 250px; /* Adjust slideshow height for mobile */
     }
 
     #menu-section > li {
-        margin-bottom: 6vh;
+        margin-bottom: 6vh; /* More spacing for mobile */
     }
 
     .gallery-grid img {
         width: 150px;
-        height: 150px;
-    }
-
-    .aboutus {
-        grid-template-columns: 1fr;
+        height: 150px; /* Smaller images for mobile */
     }
 
     footer {
@@ -239,33 +324,29 @@ h2, h3 {
     }
 }
 
-/* Tablet Styles */
+/* Tablet portrait (min-width: 601px and max-width: 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
     header {
         padding: 15px 0;
         font-size: 1.4em;
     }
 
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
     nav ul li {
+        display: block;
         margin: 5px 0;
     }
 
     #slideshow {
-        height: 300px;
+        height: 300px; /* Adjust slideshow height for tablet portrait */
+    }
+
+    #menu-section > li {
+        margin-bottom: 5vh;
     }
 
     .gallery-grid img {
         width: 180px;
-        height: 180px;
-    }
-
-    .aboutus {
-        grid-template-columns: 1fr;
+        height: 180px; /* Medium images for tablet portrait */
     }
 
     footer {
@@ -273,16 +354,11 @@ h2, h3 {
     }
 }
 
-/* Desktop Styles */
-@media (min-width: 901px) {
+/* Tablet landscape (min-width: 901px and max-width: 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
     header {
         padding: 20px 0;
         font-size: 1.6em;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
     }
 
     nav ul li {
@@ -291,19 +367,78 @@ h2, h3 {
     }
 
     #slideshow {
-        height: 350px;
+        height: 350px; /* Adjust slideshow height for tablet landscape */
+    }
+
+    #menu-section > li {
+        margin-bottom: 4vh;
     }
 
     .gallery-grid img {
         width: 190px;
-        height: 190px;
-    }
-
-    .aboutus {
-        grid-template-columns: 2fr 1fr;
+        height: 190px; /* Slightly larger images for tablet landscape */
     }
 
     footer {
         font-size: 1.1em;
     }
 }
+
+/* reservation Styles */
+
+.main_reservation {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #235D3A;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #484C57;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #235D3A;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b4a2e;
+}
+
+/* Responsive Form Styles */
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
