@@ -1,26 +1,17 @@
+<!-- index.php (or any other page) -->
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Berko, Walid">
-    <title>Chillies Galore | Reservering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chillies Galore</title>
     <link rel="stylesheet" href="css/test.css">
 </head>
 <body>
-    <header>
-        <h1>Chillies Galore</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="reservation.php">Reserveren</a></li>
-            </ul>
-        </nav>
-    </header>
 
+    <?php include 'header.php'; ?>
+    
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Ontvang de gegevens uit het formulier
@@ -99,8 +90,9 @@
     }
     ?>
 
-    <footer>
-        <p>&copy; 2024 Chillies Galore</p>
-    </footer>
+
+    <?php include 'footer.php'; ?>
+
 </body>
 </html>
+
