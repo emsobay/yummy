@@ -442,7 +442,31 @@ button:hover {
     }
 }
 
-/* Styling for the burger icon */
+/* Standaard witte tekst voor de navigatie */
+#nav-links a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+/* Styling voor de titel/logo boven de navigatie */
+.logo {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Zorg dat de titel goed zichtbaar is in combinatie met het burger menu */
+.burger-menu {
+    position: absolute;
+    top: 50px; /* Aangepaste positie om ruimte te maken voor de titel */
+    right: 20px;
+}
+
+
+
+/* Styling voor de burger icon */
 .burger-menu {
     display: none;
     flex-direction: column;
@@ -455,7 +479,7 @@ button:hover {
 .burger-menu span {
     width: 30px;
     height: 4px;
-    background-color: #333;
+    background-color: white; /* Witte kleur voor burger icon */
     margin: 5px 0;
 }
 
@@ -469,13 +493,7 @@ button:hover {
     list-style: none;
 }
 
-#nav-links a {
-    text-decoration: none;
-    padding: 10px;
-    color: #333;
-}
-
-/* Show burger menu and hide navigation links by default on mobile */
+/* Mobiele versie met witte tekst en zwarte achtergrond bij openen menu */
 @media (max-width: 768px) {
     .burger-menu {
         display: flex;
@@ -485,7 +503,7 @@ button:hover {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #f9f9f9;
+        background-color: #000; /* Zwarte achtergrond voor het geopende menu */
         position: absolute;
         top: 50px;
         left: 0;
@@ -498,10 +516,11 @@ button:hover {
     #nav-links li {
         text-align: center;
         padding: 10px;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #333;
     }
 
     #nav-links a {
         width: 100%;
+        color: white; /* Witte tekst in het geopende menu */
     }
 }
