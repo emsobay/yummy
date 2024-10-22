@@ -442,3 +442,78 @@ button:hover {
     }
 }
 
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Main container for the menu */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the drinks */
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+}
+
+.title {
+    grid-column: 1 / -1; /* Span the title across all columns */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Each drink item */
+.drank-item {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.drank-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.drink-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin: 5px 0;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr; /* Switch to 1 column on small screens */
+    }
+}
