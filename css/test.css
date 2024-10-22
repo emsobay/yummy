@@ -442,3 +442,66 @@ button:hover {
     }
 }
 
+/* Styling for the burger icon */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.burger-menu span {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+/* Hiding the navigation on mobile */
+#nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-links li {
+    list-style: none;
+}
+
+#nav-links a {
+    text-decoration: none;
+    padding: 10px;
+    color: #333;
+}
+
+/* Show burger menu and hide navigation links by default on mobile */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #nav-links a {
+        width: 100%;
+    }
+}
