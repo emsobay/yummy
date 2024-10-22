@@ -34,7 +34,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position:sticky;
+    position: sticky;
     bottom: 0;
     width: 100%;
 }
@@ -460,22 +460,18 @@ button:hover {
 /* Zorg dat de titel goed zichtbaar is in combinatie met het burger menu */
 .burger-menu {
     position: absolute;
-    top: 50px; /* Aangepaste positie om ruimte te maken voor de titel */
+    top: 15px; /* Positie van het burger menu */
     right: 20px;
 }
-
-
 
 /* Styling voor de burger icon */
 .burger-menu {
-    display: none;
+    display: none; /* Standaard niet zichtbaar */
     flex-direction: column;
     cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
 }
 
+/* Styling voor de burger icon lijnen */
 .burger-menu span {
     width: 30px;
     height: 4px;
@@ -493,24 +489,25 @@ button:hover {
     list-style: none;
 }
 
-/* Mobiele versie met witte tekst en zwarte achtergrond bij openen menu */
+/* Mobiele versie met witte tekst en grijze achtergrond bij openen menu */
 @media (max-width: 768px) {
     .burger-menu {
-        display: flex;
+        display: flex; /* Maak burger menu zichtbaar op mobiel */
     }
 
     #nav-links {
-        display: none;
+        display: none; /* Verberg navigatie standaard */
         flex-direction: column;
         width: 100%;
-        background-color: #000; /* Zwarte achtergrond voor het geopende menu */
+        background-color: #808080; /* Grijze achtergrond voor het geopende menu */
         position: absolute;
-        top: 50px;
+        top: 50px; /* Ruimte onder de burger menu */
         left: 0;
+        z-index: 2; /* Zorg ervoor dat het menu voor de slideshow staat */
     }
 
     #nav-links.active {
-        display: flex;
+        display: flex; /* Toont navigatie als menu actief is */
     }
 
     #nav-links li {
@@ -523,4 +520,10 @@ button:hover {
         width: 100%;
         color: white; /* Witte tekst in het geopende menu */
     }
+}
+
+/* Slideshow styling */
+.slideshow {
+    position: relative; /* Zorg ervoor dat de slideshow zich correct positioneert */
+    z-index: 1; /* Zorg ervoor dat de slideshow achter de burger menu staat */
 }
