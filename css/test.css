@@ -442,28 +442,13 @@ button:hover {
     }
 }
 
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-}
-
 /* Main container for the menu */
 .menu-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns for the drinks */
     grid-gap: 20px;
     padding: 20px;
-    background-color: #2b2b2b;
+    background-color: #fff;
     border-radius: 10px;
 }
 
@@ -481,16 +466,24 @@ body {
     border-radius: 8px;
     text-align: center;
     position: relative;
+    width: 100%; /* Ensure the element uses the full width of the container */
+    height: 300px; /* Fixed height for uniformity */
+    overflow: hidden; /* Hide any overflow */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out content */
 }
 
 .drank-item img {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Fill the width of the container */
+    height: 150px; /* Fixed height for all images */
     border-radius: 8px;
+    object-fit: cover; /* Crop the image to fit the container */
 }
 
 .drink-name {
     font-size: 1.5rem;
+    color: #fff;
     margin: 10px 0;
 }
 
