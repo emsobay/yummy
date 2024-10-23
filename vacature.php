@@ -10,6 +10,11 @@
         <meta name="author" content="Berko,Walid,Emin">
         <title>Chillies Galore | Vacture</title>
         <link rel="stylesheet" href="css/test.css">
+        <style>
+            .vacature h2 {
+                color: #235D3A;  
+            }
+        </style>
     </head>
 <body>
 

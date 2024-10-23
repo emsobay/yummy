@@ -105,15 +105,11 @@
                         "Champagne Cocktail",
                         "Cuba Libre",
                         "Godmother",
-<<<<<<< Updated upstream
-                        "Godfather"
-=======
                         "Godfather",
                         "Cola",
                         "Fanta",
                         "Sprite",
                         "Water"
->>>>>>> Stashed changes
                     ]
                 ],
                 [
@@ -139,21 +135,18 @@
                     ],
                     "dranken" => [
                         "Belini",
+                        "Bloody Mary",
+                        "Black Russian",
                         "Cosmopolitan",
+                        "Caipirinha",
+                        "Champagne Cocktail",
                         "Cuba Libre",
                         "Godmother",
                         "Godfather",
-<<<<<<< Updated upstream
-                        "Water"
-                        "Cola",
-                        "Fanta",
-                        "Sprite"
-=======
-                        "Water",
                         "Cola",
                         "Fanta",
                         "Sprite",
->>>>>>> Stashed changes
+                        "Water"
                     ]
                 ]
             ];
@@ -182,11 +175,8 @@
             ?>
         </section>
     </main>
-<<<<<<< Updated upstream
-=======
 </body>
 </html>
->>>>>>> Stashed changes
 
 
 <?php include 'footer.php'; ?>
