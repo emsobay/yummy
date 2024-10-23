@@ -1,6 +1,12 @@
 <header>
+    <h1 class="logo">Chillies Galore</h1> <!-- Toegevoegd logo titel -->
     <nav>
-        <ul>
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="menu.php">Menu</a></li>
             <li><a href="gallery.php">Gallery</a></li>
@@ -14,3 +20,11 @@
     </nav>
 </header>
 
+<script>
+    const burgerMenu = document.getElementById('burger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    burgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
