@@ -19,17 +19,15 @@
 
 <<<<<<< Updated upstream
 
-<main>
-        <section class="arrangementen-container">
-            <?php
+
            
-=======
+
     
 <main>
         <section class="arrangementen-container">
             <?php
             // Array van arrangementen met gerechten en dranken
->>>>>>> Stashed changes
+
             $arrangementen = [
                 [
                     "titel" => "Shared Dining",
@@ -90,7 +88,7 @@
                         ]
                     ],
                     "dranken" => [
-<<<<<<< Updated upstream
+
                         "Cola",
                         "Fanta",
                         "Sprite",
