@@ -17,11 +17,19 @@
 
 <h1>Onze Arrangementen</h1>
 
+<<<<<<< Updated upstream
 
 <main>
         <section class="arrangementen-container">
             <?php
            
+=======
+    
+<main>
+        <section class="arrangementen-container">
+            <?php
+            // Array van arrangementen met gerechten en dranken
+>>>>>>> Stashed changes
             $arrangementen = [
                 [
                     "titel" => "Shared Dining",
@@ -82,10 +90,13 @@
                         ]
                     ],
                     "dranken" => [
+<<<<<<< Updated upstream
                         "Cola",
                         "Fanta",
                         "Sprite",
                         "Water",
+=======
+>>>>>>> Stashed changes
                         "Belini",
                         "Bloody Mary",
                         "Black Russian",
@@ -94,7 +105,15 @@
                         "Champagne Cocktail",
                         "Cuba Libre",
                         "Godmother",
+<<<<<<< Updated upstream
                         "Godfather"
+=======
+                        "Godfather",
+                        "Cola",
+                        "Fanta",
+                        "Sprite",
+                        "Water"
+>>>>>>> Stashed changes
                     ]
                 ],
                 [
@@ -124,10 +143,17 @@
                         "Cuba Libre",
                         "Godmother",
                         "Godfather",
+<<<<<<< Updated upstream
                         "Water"
                         "Cola",
                         "Fanta",
                         "Sprite"
+=======
+                        "Water",
+                        "Cola",
+                        "Fanta",
+                        "Sprite",
+>>>>>>> Stashed changes
                     ]
                 ]
             ];
@@ -156,6 +182,11 @@
             ?>
         </section>
     </main>
+<<<<<<< Updated upstream
+=======
+</body>
+</html>
+>>>>>>> Stashed changes
 
 
 <?php include 'footer.php'; ?>
