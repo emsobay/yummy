@@ -493,7 +493,7 @@ h1 {
 /* Stijl voor titels van vacatures */
 .vacature h2 {
     margin-top: 0;
-    color: #3498db;
+    color: green;
     font-size: 1.5em;
 }
 
