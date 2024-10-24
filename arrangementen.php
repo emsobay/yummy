@@ -16,7 +16,76 @@
 <?php include 'header.php'; ?>
 
 <h1>Onze Arrangementen</h1>
+<main>
+        <section class="arrangementen-container">
+            <?php
+            // Array van arrangementen met gerechten en dranken
 
+            $arrangementen = [
+                [
+                    "titel" => "Shared Dining",
+                    "beschrijving" => "Geniet van een gezamenlijke eetervaring met een verscheidenheid aan gerechten en dranken.",
+                    "prijs" => "€29,99",
+                    "gerechten" => [
+                        [
+                            "naam" => "Carne Asada Tacos",
+                            "beschrijving" => "Gegrild gemarineerd rundvlees, koriander, uien en limoen. Geserveerd met salsa.",
+                            "prijs" => "$10.99"
+                        ],
+                        [
+                            "naam" => "Al Pastor Tacos",
+                            "beschrijving" => "Kruidige gemarineerde varkensvlees met ananas, koriander en uien.",
+                            "prijs" => "$9.99"
+                        ],
+                        [
+                            "naam" => "Fish Tacos",
+                            "beschrijving" => "Knapperige gefrituurde vis, kool slaw en chipotle mayo op een maïstortilla.",
+                            "prijs" => "$11.99"
+                        ]
+                    ],
+                    "dranken" => [
+                        "Belini",
+                        "Bloody Mary",
+                        "Black Russian",
+                        "Cosmopolitan",
+                        "Caipirinha",
+                        "Champagne Cocktail",
+                        "Cuba Libre",
+                        "Godmother",
+                        "Godfather",
+                        "Cola",
+                        "Fanta",
+                        "Sprite",
+                        "Water"
+                    ]
+                ],
+                [
+                    "titel" => "3 Gangenmenu inclusief drankjes",
+                    "beschrijving" => "Verwen jezelf met een heerlijk driegangenmenu met bijpassende drankjes.",
+                    "prijs" => "€39,99",
+                    "gerechten" => [
+                        [
+                            "naam" => "Chicken Burrito",
+                            "beschrijving" => "Gegrilde kip, rijst, bonen, kaas, zure room en salsa gewikkeld in een tortillawrap.",
+                            "prijs" => "$8.99"
+                        ],
+                        [
+                            "naam" => "Vegetarian Burrito",
+                            "beschrijving" => "Rijst, bonen, kaas, gegrilde groenten en guacamole in een tortillawrap.",
+                            "prijs" => "$7.99"
+                        ],
+                        [
+                            "naam" => "Barbacoa Burrito",
+                            "beschrijving" => "Langzaam gekookt rundvlees, rijst, bonen, kaas en pico de gallo gewikkeld in een tortillawrap.",
+                            "prijs" => "$9.99"
+                        ]
+                    ],
+                    "dranken" => [
+
+                        "Cola",
+                        "Fanta",
+                        "Sprite",
+                        "Water",
                         "Belini",
                         "Bloody Mary",
                         "Black Russian",
