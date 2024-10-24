@@ -1,5 +1,5 @@
 <header>
-    <h1 class="logo">Chillies Galore</h1> <!-- Toegevoegd logo titel -->
+    <h1 class="logo">Chillies Galore</h1> 
     <nav>
         <div class="burger-menu" id="burger-menu">
             <span></span>
