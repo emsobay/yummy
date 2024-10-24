@@ -1,4 +1,4 @@
 <!-- footer.php -->
-<footer class="footer-index">
+<footer>
     <p>&copy; 2024 Chillies Galore</p>
 </footer>

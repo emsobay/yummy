@@ -39,15 +39,6 @@ footer {
     width: 100%;
 }
 
-.footer-index {
-    background-color: #B10001;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 
 
 /*menu foto*/
@@ -529,7 +520,7 @@ button:hover {
 }
 
 /* Algemene pagina-styling */
-.vacature_body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -537,7 +528,6 @@ button:hover {
     color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content:flex-start ;
     min-height: 100vh;
 }
@@ -556,6 +546,8 @@ h1 {
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
+
+    align-items: center;
     width: 100%;
     margin: 0 auto;
     justify-content: center;
@@ -609,5 +601,116 @@ h1 {
     }
     .vacature-container {
         padding: 10px;
+    }
+}
+ 
+ 
+h1 {
+    margin: 0;
+}
+ 
+main {
+    padding: 20px;
+}
+ 
+.arrangementen-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+ 
+.arrangement {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+ 
+.arrangement:hover {
+    transform: scale(1.05);
+}
+ 
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+ 
+h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+
+/* dranken */
+/* Main container for the menu */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the drinks */
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+ 
+.title {
+    grid-column: 1 / -1; /* Span the title across all columns */
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+ 
+/* Each drink item */
+.drank-item {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 100%; /* Ensure the element uses the full width of the container */
+    height: 300px; /* Fixed height for uniformity */
+    overflow: hidden; /* Hide any overflow */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out content */
+}
+ 
+.drank-item img {
+    width: 100%; /* Fill the width of the container */
+    height: 150px; /* Fixed height for all images */
+    border-radius: 8px;
+    object-fit: cover; /* Crop the image to fit the container */
+}
+ 
+.drink-name {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 10px 0;
+}
+ 
+.price {
+    font-size: 1.2rem;
+    color: #abd521;
+    margin: 5px 0;
+}
+ 
+.description {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+ 
+/* Make the layout responsive */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
+    }
+}
+ 
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr; /* Switch to 1 column on small screens */
     }
 }

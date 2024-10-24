@@ -15,7 +15,7 @@
             }
         </style>
     </head>
-<body class="vacature_body">
+<body>
  
 <?php include 'header.php'; ?>
  
