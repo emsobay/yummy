@@ -17,7 +17,6 @@
 
 <h1>Onze Arrangementen</h1>
 
-<<<<<<< Updated upstream
 
 
            
@@ -93,8 +92,6 @@
                         "Fanta",
                         "Sprite",
                         "Water",
-=======
->>>>>>> Stashed changes
                         "Belini",
                         "Bloody Mary",
                         "Black Russian",
