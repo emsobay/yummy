@@ -38,8 +38,8 @@
     <h3>Recensies van Klanten</h3>
     <div id="reviews-list">
         <?php
-        // Databaseverbinding
-$conn = new mysqli('localhost', 'root', '', 'jouw_database_naam');
+      // Databaseverbinding
+$conn = new mysqli('localhost', 'root', '', 'chillies_galore'); // Zorg ervoor dat je de juiste database naam gebruikt
 
 // Controleren op verbindingsfouten
 if ($conn->connect_error) {
