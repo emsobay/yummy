@@ -442,3 +442,162 @@ button:hover {
     }
 }
 
+<<<<<<< Updated upstream
+
+
+/* Algemene pagina-styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content:flex-start ; 
+    min-height: 100vh;
+}
+
+/* Titel */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 20px;
+}
+
+/* Container voor vacatures in een grid */
+.vacature-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%; 
+    margin: 0 auto; 
+    justify-content: center; 
+}
+
+/* Vacature kaarten */
+.vacature-container > .vacature {
+    background-color: rgb(197, 197, 197);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+/* Stijl voor titels van vacatures */
+.vacature h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+/* Stijl voor vacature-inhoud */
+.vacature p, .vacature ul {
+    line-height: 1.6;
+}
+
+/* Stijl voor vereisten */
+.vacature ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* E-mail link styling */
+.vacature a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.vacature a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiviteit */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .vacature-container {
+        padding: 10px;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.arrangementen-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; 
+}
+
+.arrangement {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.arrangement:hover {
+    transform: scale(1.05); 
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+=======
+>>>>>>> Stashed changes
