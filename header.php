@@ -1,3 +1,10 @@
+        <style>
+            .vacature h2 {
+                color:#235D3A ;  
+            }
+        </style>
+
+
 <header>
     <h1 class="logo">Chillies Galore</h1> 
     <nav>
