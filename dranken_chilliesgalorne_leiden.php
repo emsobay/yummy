@@ -13,6 +13,8 @@
 <body>
  
 <?php include 'header.php'; ?>
+
+<!--berko-->
  
 <main class="menu-container">
     <h1 class="title">Onze Dranken</h1>
