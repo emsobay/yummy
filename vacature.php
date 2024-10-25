@@ -3,41 +3,21 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
         <meta http-equiv="X-UA-Compatible"  content="IE=edge"> 
-=======
-        <meta http-equiv="X-UA-Compatible"  content="IE=edge">
->>>>>>> Stashed changes
-        <meta name="description" content="Chilies Galore, vacturen.php">
-        <meta name="keywords" content="HTML, Chilies Galore">
+        <meta name="description" content="Chilies Galore, arrangementen.php">
+        <meta name="keywords" content="HTML, Chilies Galore,PHP, SQL">
         <meta name="author" content="Berko,Walid,Emin">
         <title>Chillies Galore | Vacture</title>
         <link rel="stylesheet" href="css/test.css">
-<<<<<<< Updated upstream
-=======
         <style>
             .vacature h2 {
                 color: #235D3A;  
             }
         </style>
->>>>>>> Stashed changes
     </head>
 <body>
  
 <?php include 'header.php'; ?>
-<<<<<<< Updated upstream
-
-
-<main class="grid-container">
-    <h1 class="title">Openstaande Vacatures</h1>
-    <div class="job-list">
-        <div class="job-item">Vacature 1: Omschrijving</div>
-        <div class="job-item">Vacature 2: Omschrijving</div>
-        <div class="job-item">Vacature 3: Omschrijving</div>
-    </div>
-</main>
-
-=======
  
 <h1>Vacatures bij Restaurant Chilies Galore</h1>
  
@@ -99,7 +79,6 @@
         </section>
     </main>
  
->>>>>>> Stashed changes
 <?php include 'footer.php'; ?>
  
  

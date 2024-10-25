@@ -34,7 +34,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position:sticky;
+    position: sticky;
     bottom: 0;
     width: 100%;
 }
@@ -433,73 +433,90 @@ button:hover {
     }
 }
 
-/* Main container for the menu */
-.menu-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for the drinks */
-    grid-gap: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-.title {
-    grid-column: 1 / -1; /* Span the title across all columns */
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Each drink item */
-.drank-item {
-    background-color: #444;
+/* Standaard witte tekst voor de navigatie */
+#nav-links a {
+    text-decoration: none;
     padding: 10px;
-    border-radius: 8px;
+    color: white;
+}
+
+/* Styling voor de titel/logo boven de navigatie */
+.logo {
+    font-size: 24px;
+    color: white;
     text-align: center;
-    position: relative;
-    width: 100%; /* Ensure the element uses the full width of the container */
-    height: 300px; /* Fixed height for uniformity */
-    overflow: hidden; /* Hide any overflow */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: space-between; /* Space out content */
-}
-
-.drank-item img {
-    width: 100%; /* Fill the width of the container */
-    height: 150px; /* Fixed height for all images */
-    border-radius: 8px;
-    object-fit: cover; /* Crop the image to fit the container */
-}
-
-.drink-name {
-    font-size: 1.5rem;
-    color: #fff;
     margin: 10px 0;
 }
 
-.price {
-    font-size: 1.2rem;
-    color: #ffcc00;
+/* Zorg dat de titel goed zichtbaar is in combinatie met het burger menu */
+.burger-menu {
+    position: absolute;
+    top: 15px; /* Positie van het burger menu */
+    right: 20px;
+}
+
+/* Styling voor de burger icon */
+.burger-menu {
+    display: none; /* Standaard niet zichtbaar */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Styling voor de burger icon lijnen */
+.burger-menu span {
+    width: 30px;
+    height: 4px;
+    background-color: white; /* Witte kleur voor burger icon */
     margin: 5px 0;
 }
 
-.description {
-    font-size: 0.9rem;
-    color: #ddd;
+/* Hiding the navigation on mobile */
+#nav-links {
+    display: flex;
+    justify-content: space-between;
 }
 
-/* Make the layout responsive */
+#nav-links li {
+    list-style: none;
+}
+
+/* Mobiele versie met witte tekst en grijze achtergrond bij openen menu */
 @media (max-width: 768px) {
-    .menu-container {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
+    .burger-menu {
+        display: flex; /* Maak burger menu zichtbaar op mobiel */
+    }
+
+    #nav-links {
+        display: none; /* Verberg navigatie standaard */
+        flex-direction: column;
+        width: 100%;
+        background-color: #808080; /* Grijze achtergrond voor het geopende menu */
+        position: absolute;
+        top: 50px; /* Ruimte onder de burger menu */
+        left: 0;
+        z-index: 2; /* Zorg ervoor dat het menu voor de slideshow staat */
+    }
+
+    #nav-links.active {
+        display: flex; /* Toont navigatie als menu actief is */
+    }
+
+    #nav-links li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #333;
+    }
+
+    #nav-links a {
+        width: 100%;
+        color: white; /* Witte tekst in het geopende menu */
     }
 }
 
-@media (max-width: 480px) {
-    .menu-container {
-        grid-template-columns: 1fr; /* Switch to 1 column on small screens */
-    }
+/* Slideshow styling */
+.slideshow {
+    position: relative; /* Zorg ervoor dat de slideshow zich correct positioneert */
+    z-index: 1; /* Zorg ervoor dat de slideshow achter de burger menu staat */
 }
 
 /* Algemene pagina-styling */
