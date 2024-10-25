@@ -41,7 +41,7 @@
         $subject = "Bevestiging van uw reservering";
         $message = "Bedankt voor uw reservering bij Chillies Galore!\n\nDetails:\nNaam: $firstName $middleName $lastName\nTelefoonnummer: $phoneNumber\nEmailadres: $email\nDatum: $reservationDate\nTijd: $reservationTime\nAantal personen: $people";
         $headers = "From: no-reply@chilliesgalore.com";
-
+    }
        
     ?>
 
@@ -89,7 +89,7 @@
     </main>
 
     <?php
-    }
+    
     ?>
 
 
