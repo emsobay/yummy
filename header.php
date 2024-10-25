@@ -7,15 +7,15 @@
             <span></span>
 </section>
         <ul id="nav-links">
-            <li><a href="index_chilliesgalorne_leiden.php">Home</a></li>
-            <li><a href="menu_chilliesgalorne_leiden.php">Menu</a></li>
-            <li><a href="gallery_chilliesgalorne_leiden.php">Gallery</a></li>
-            <li><a href="about_chilliesgalorne_leiden.php">About Us</a></li>
-            <li><a href="reservation_chilliesgalorne_leiden.php">Reservations</a></li>
-            <li><a href="vacature_chilliesgalorne_leiden.php">Vacatures</a></li> 
-            <li><a href="dranken_chilliesgalorne_leiden.php">Dranken</a></li> 
-            <li><a href="arrangementen_chilliesgalorne_leiden.php">Arrangementen</a></li> 
-            <li><a href="recensies_chilliesgalorne_leiden.php">Recensies</a></li> 
+            <li><a href="index.php">Home</a></li>
+            <li><a href="menu.php">Menu</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
+            <li><a href="about.php">About Us</a></li>
+            <li><a href="reservation.php">Reservations</a></li>
+            <li><a href="vacature.php">Vacatures</a></li> 
+            <li><a href="dranken.php">Dranken</a></li> 
+            <li><a href="arrangementen.php">Arrangementen</a></li> 
+            <li><a href="recensies.php">Recensies</a></li> 
         </ul>
     </nav>
 </header>
