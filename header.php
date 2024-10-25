@@ -1,11 +1,11 @@
 <header>
     <h1 class="logo">Chillies Galore</h1> <!-- Toegevoegd logo titel -->
     <nav>
-        <div class="burger-menu" id="burger-menu">
+        <section class="burger-menu" id="burger-menu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+</section>
         <ul id="nav-links">
             <li><a href="index_chilliesgalorne_leiden.php">Home</a></li>
             <li><a href="menu_chilliesgalorne_leiden.php">Menu</a></li>
